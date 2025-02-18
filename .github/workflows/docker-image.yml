@@ -14,8 +14,8 @@ jobs:
         uses: actions/checkout@v4
       - name: build image
         run: 
-          run: docker build . --file Dockerfile --tag lscanferlato/countdown:latest
+            docker build . --file Dockerfile --tag lscanferlato/countdown:latest
       - name: push image to docker hub
-        run: |
+        run: 
           docker login -u lscanferlto -p ${{ secrets.DOCKER_HUB_TOKEN }}
           docker push lscanferlato/countdown:latest
