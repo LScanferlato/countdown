@@ -15,7 +15,9 @@ jobs:
       - name: build image
         run: 
             docker build . --file Dockerfile --tag lscanferlato/countdown:latest
-      - name: push image to docker hub
+      - name: login to docker hub
         run: 
           docker login -u lscanferlto -p ${{ secrets.DOCKER_HUB_TOKEN }}
+      - name: push image 
+        run:
           docker push lscanferlato/countdown:latest
