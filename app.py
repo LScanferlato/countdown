@@ -11,7 +11,7 @@ def index():
     current_date = datetime.now()
     # Calcolo dei giorni rimanenti
     days_remaining = (target_date - current_date).days
-    return f"<h1>Giorni rimanenti al 31/12/2030: {days_remaining}</h1>"
+    return f"<h1>Giorni rimanenti al {target_date}: {days_remaining}</h1>"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
