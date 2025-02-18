@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag lscanferlato/countdown:latest
     - name: Log in to registry
-      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login -u lscanferlato -p ${{secret.DOCKER_HUB_TOKEN}}
+      run: docker login -u lscanferlato -p ${{secrets.DOCKER_HUB_TOKEN}}
     - name: push image to dockerhub
       run: 
         docker push lscanferlato/countdown:latest
