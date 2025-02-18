@@ -20,5 +20,4 @@ jobs:
             docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }} registry.hub.docker.com
       - name: push image 
         run:
-          docker push lscanferlato/countdown:latest
-          
+          docker push lscanferlato/countdown:latest          
