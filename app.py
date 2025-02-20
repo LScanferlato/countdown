@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # Data di riferimento
-    target_date = datetime(2026, 3, 5)
+    target_date = datetime(2030, 12, 12)
     # Data attuale
     current_date = datetime.now()
     # Calcolo dei giorni rimanenti
