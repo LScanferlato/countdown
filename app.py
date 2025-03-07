@@ -16,7 +16,7 @@ def index():
     # Formatta il testo di ritorno su due righe
     return (
         f"<h1>Giorni rimanenti al {target_date}: {days_remaining}</h1>\n"
-        f"<h2>Giorni massimi rimanenti al {max_target_date}: {maxdays_remaining}</h2>"
+        f"<h2>Giorni massimi rimanenti al {max_target_date}: {maxdays_remaining}</h2>")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
