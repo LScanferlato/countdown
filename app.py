@@ -13,10 +13,8 @@ def index():
     # Calcolo dei giorni rimanenti
     days_remaining = (target_date - current_date).days
     maxdays_remaining = (max_target_date - current_date).days
-    # Formatta il testo di ritorno su due righe
-    return (
-        f"<h1>Giorni rimanenti al {target_date}: {days_remaining}</h1>\n"
-        f"<h1>Giorni massimi rimanenti al {max_target_date}: {maxdays_remaining}</h1>")
+    # Passa i dati al template
+    return render_template('index.html', days_remaining=days_remaining, maxdays_remaining=maxdays_remaining)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
